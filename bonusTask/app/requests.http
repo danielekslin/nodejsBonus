@@ -1,0 +1,49 @@
+@web = http://localhost:3000
+
+### get the the html
+
+GET {{web}}
+
+### get - all(show all requests)
+
+GET {{web}}/all
+
+### post
+
+POST {{web}}/add
+Content-Type: application/json
+
+{
+   "id":1,
+   "foodName":"pancake",
+   "duartion":5,
+   "difficulty":"easy"
+}
+
+### another post
+POST {{web}}/add
+Content-Type: application/json
+
+{
+   "id":2,
+   "foodName":"boiled eggs",
+   "duartion":15,
+   "difficulty":"very easy"
+}
+
+### put
+
+PUT {{web}}/update/pancake
+Content-Type: application/json
+
+{
+   "newDifficulty":"medium"
+}
+
+### delete
+
+DELETE {{web}}/delete/3
+
+
+
+
